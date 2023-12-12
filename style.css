@@ -148,8 +148,9 @@ z-index:1000;
   display: flex;
   align-items: center;
 }
-
-
+i{
+  font-size: 24px;
+}
 .home-bgn .home  .content{
   width: 50rem;
   text-align: center;
