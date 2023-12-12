@@ -1,0 +1,601 @@
+/*
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.logo img{
+    height: 3rem;
+    border-radius: 60px;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+.flex img{
+    height: 3rem;
+    border-radius: 50px;
+}
+
+section nav{
+    display: flex;
+    justify-content:space-around ;
+    align-items:center ;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0,0, 0.5);
+    z-index: 1000;
+    padding: 5px;
+}*/
+/*
+section nav img{
+    /*width: 100px;*/
+    /*
+    cursor: pointer;
+    margin: 7px 0;
+}
+
+section nav a{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav a{
+    text-decoration: none;
+    color:rgb(30, 27, 27);
+    font-weight: 500;
+    font-size: 17px;
+}
+section nav a:hover{
+    color:rgb(234, 152, 0) ;
+}
+
+section nav a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color:rgb(234, 152, 0);
+    display:block;
+    transition: 0.2s linear;
+}
+
+section nav a:hover::after{
+    width: 100%;
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;600&display=swap');
+
+:root{
+  --main-color:#be9c79;
+  --black:#333;
+  --white:#fff;
+  --light-color:#666;
+  --border:.2rem solid var(--black);
+  --box-shadow:0  .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+*{
+  font-family: 'Nunito',sans-serif;
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+  outline:none;border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+*::selection{
+  background-color: var(--main-color);
+  color:var(--white);
+}
+
+::-webkit-scrollbar{
+  height: .5rem;
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgb(155, 103, 5);
+  border-radius: 30px;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top:6rem;
+
+}
+
+
+section{
+  padding:3rem 2rem;
+  max-width: 1200px;
+  margin:0 auto;
+}
+
+.heading{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading img{
+  height: 4rem;
+}
+
+.heading h3{
+  font-size: 4rem;
+  color:  var(--black);
+  font-family: 'Merienda one',cursive;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: orange;
+  padding: 1rem 3rem;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.btn:hover{
+  background-color: green;
+  color:var(--white);
+  transition: 0.2s linear;
+}
+
+
+.header{
+position: sticky;
+top: 0; left: 0; right:0;
+background-color:white;
+box-shadow: var(--box-shadow);
+z-index:1000;
+}
+
+.header .flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  padding: 1.5rem 2rem;
+}
+
+
+.header .flex .logo img{
+  height:5rem;
+  padding-left: none;
+  border-radius: 60px;
+}
+
+.header .flex .navbar a{
+  margin-left:5rem;
+  font-size: 1.5rem;
+  color: rgb(214, 139, 0);
+  display:inline-block;
+}
+.header .flex .navbar a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color:rgb(234, 152, 0);
+    display:block;
+    transition: 0.2s linear;
+}
+.header .flex .navbar a:hover{
+    color:rgb(234, 152, 0) ;
+}
+.header .flex .navbar a:hover::after{
+    width: 100%;
+}
+#menu-btn{
+  display: none;
+  font-size: 2.5rem;
+  color: orange;
+  cursor: pointer;
+}
+
+
+.home-bgn{
+  background:url(images/home-bg.jpg)
+  no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-bgn .home{
+  min-height: 70rem;
+  display: flex;
+  align-items: center;
+}
+
+
+.home-bgn .home  .content{
+  width: 50rem;
+  text-align: center;
+  color: black;
+  margin-left: 3rem;
+}
+
+
+.home-bgn .home  .content h1{
+  font-size: 6.5rem;
+  color:rgb(34, 29, 29);
+  font-family: 'Merienda One' ,cursive;
+  font-weight: bolder;
+}
+
+.home-bgn .home  .content p{
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  color: rgb(5, 4, 4);
+  line-height: 1.5em;
+  font-weight: 600;
+}
+
+.about{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap:4rem;
+}
+
+.about .image{
+  flex: 1 1 40rem;
+}
+
+.about .image img{
+  width: 100%;
+  border-radius: 300px;
+}
+
+.about .content{
+  flex:1 1 40rem;
+}
+
+
+.about .content h2{
+  font-size: 3.5rem;
+  color: green;
+    font-family: 'Merienda One',cursive;
+    padding-bottom: 1rem;
+}
+
+.content h3{
+  font-size: 18px;
+}
+.about .content p{
+  padding: 1rem 0;
+  line-height: 2;
+  color:var(--light-color);
+  font-size: 1.5rem;
+}
+
+section h2{
+    font-size: 40px;
+    color: green;
+      font-family: 'Merienda One',cursive;
+      padding-bottom: 1rem;
+      font-weight: bolder;
+
+}
+
+.menu .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,30rem);
+  gap:1.5rem;
+  align-items:flex-start;
+  justify-content: center;
+}
+
+.menu .box-container .box{
+  text-align: center;
+  margin-bottom: 2rem;
+  border: 3px solid rgb(255, 255, 255);
+  padding: 10px;
+  box-shadow: var(--box-shadow);
+  
+  background-color: rgb(249, 179, 50);
+
+}
+
+.menu .box-container img{
+  margin-bottom: 1rem;
+  width: 70%;
+  border-radius: 300px;
+}
+
+.menu .box-container .box h3{
+  font-size: 3rem;
+  color: green;
+  margin-bottom: 5px;
+  text-align:center ;
+}
+.menu .box-container .box p{
+    color: black;
+    font-size: 1.2rem;
+}
+
+
+
+.team .box-container{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,30rem);
+  gap:2rem;
+  justify-content: center;
+}
+.team .box-container .box{
+  text-align: center;
+  background-color: orange;
+  box-shadow: var(--box-shadow);
+  border: 3px solid white;
+  padding: 20px;
+  margin: 10px;
+}
+
+.team .box-container .box img{
+  height: 70%;
+  object-fit: cover;
+  margin-bottom: 3rem;
+  width: 70%;
+  border-radius: 1rem;
+}
+
+.team .box-container .box h3{
+  font-size: 2rem;
+  color: green;
+}
+
+.contact .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:2rem;
+}
+
+.contact .row .image{
+  flex:1 1 50rem;
+}
+
+.contact .row .image img{
+  width: 100%;
+}
+
+.contact .row form{
+  flex:1 1 30rem;
+  border: var(--border);
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.contact .row form h3{
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--black);
+}
+
+
+.contact .row form .box{
+  width: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+  color: var(--black);
+  border: var(--border);
+  margin: 1rem 0;
+}
+
+
+.contact .row form .btn{
+  display:block;
+  margin: auto;
+}
+
+
+.footer .box-container{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,30rem);
+  gap:2rem;
+  justify-content: center;
+}
+
+.footer .box-container .box{
+  text-align: center;
+}
+
+.footer .box-container .box i{
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 6rem;
+  height: 6rem;
+  width:6rem;
+  background-color:var(--main-color);
+  margin-bottom:1rem;
+  color: white;
+}
+
+.footer .box-container .box h3{
+  font-size: 2rem;
+  margin:1rem;
+}
+
+.footer .box-container .box p{
+  font-size: 1.5rem;
+  line-height: 2;
+  color: var(--light);
+}
+
+
+.footer .credit{
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: var(--border);
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.footer .credit span{
+  color: var(--main-color)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+
+    html{
+      font-size: 55%;
+    }
+
+}
+
+
+@media (max-width:769px){
+#menu-btn{
+    display: inline-block;
+    transition: .2s linear;
+  }
+  #menu-btn.fa-times{
+    transform: rotate(180deg);
+  }
+
+  .header .flex .navbar{
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    font-size: 2rem;
+    /*background: linear-gradient(90deg, var(--white),transparent 20%);*/
+    border-top:var(--border);
+    border-bottom:var(--border);
+    clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    transition: .3s linear;
+    background-color: var(--black);
+  }
+
+  .header .flex .navbar.active{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+  }
+
+
+    .header .flex .navbar a{
+      display: block;
+      margin: 2rem;
+      color: var(--white);
+      font-family: 'Nunito',sans-serif;
+      font-size: 1.5rem;
+    }
+
+    .home-bgn{
+      background-position: left;
+    }
+
+    .home-bgn .home{
+      justify-content: center;
+    }
+  .home-bgn .home .content h3{
+    font-size: 4rem;
+  }
+
+.about .content h3{
+  font-size: 3rem;
+}
+
+}
+
+
+
+
+@media (max-width:450px){
+
+    html{
+      font-size: 50%;
+    }
+.heading h3{
+  font-size: 2.5rem;
+}
+}
+
+
+
+
+  @media (max-width:414px){
+    
+  #menu-btn{
+      display: inline-block;
+      transition: .2s linear;
+    }
+    #menu-btn.fa-times{
+      transform: rotate(180deg);
+    }
+
+    .header .flex .navbar{
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      font-size: 2rem;
+      /*background: linear-gradient(90deg, var(--white),transparent 20%);*/
+      border-top:var(--border);
+      border-bottom:var(--border);
+      clip-path: polygon(0 0,100% 0,100% 0,0 0);
+      transition: .3s linear;
+      background-color: var(--black);
+    }
+
+    .header .flex .navbar.active{
+      clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+
+
+      .header .flex .navbar a{
+        display: block;
+        margin: 2rem;
+        color: var(--white);
+        font-family: 'Nunito',sans-serif;
+        font-size: 1.5rem;
+      }
+
+      .home-bgn{
+        background-position: left;
+      }
+
+      .home-bgn .home{
+        justify-content: center;
+      }
+    .home-bgn .home .content h3{
+      font-size: 4rem;
+    }
+
+  .about .content h3{
+    font-size: 3rem;
+  }
+
+  }
